@@ -59,7 +59,6 @@
         <div class="container">
             <div class="row nav-wrapper">
                 <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-                    <p id="logotext">Diálogos GO!</p>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
                     <p>MENÚ</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
@@ -80,50 +79,52 @@
 
 </header>
 
-<section class="screenshots-intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Diálogos celebrados</h1>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="features-intro" id="mapa">
     <div class="container-fluid">
         <div class="row">
-            <script src="js/ol.js" type="text/javascript"></script>
-            <div id="mapamain" class="mapamain"></div>
-            <script type="text/javascript">
-                var map = new ol.Map({
-                    target: 'mapamain',
-                    interactions: ol.interaction.defaults({mouseWheelZoom:false}),
-                    layers: [
-                        new ol.layer.Tile({
-                            source: new ol.source.MapQuest({layer: 'osm'})
+            <div class="col-md-6 nopadding">
+                <div class="features-slider">
+                    <ul class="slides" id="featuresSlider">
+                        <li>
+                            <h1>Diálogos celebrados</h1>
+                            <p>Estos han sido todos los diálogos celebrados. Haz click sobre uno de ellos para conocer todos los detalles.</p>
+                            <p><a class="arrow-btn">Más información <i
+                                    class="fa fa-long-arrow-right"></i></a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 nopadding">
+                <script src="js/ol.js" type="text/javascript"></script>
+                <div id="mapamain" class="mapamain"></div>
+                <script type="text/javascript">
+                    var map = new ol.Map({
+                        target: 'mapamain',
+                        interactions: ol.interaction.defaults({mouseWheelZoom:false}),
+                        layers: [
+                            new ol.layer.Tile({
+                                source: new ol.source.MapQuest({layer: 'osm'})
+                            })
+                        ],
+                        view: new ol.View({
+                            center: ol.proj.fromLonLat([-0.650940, 39.499590]),
+                            zoom: 9
                         })
-                    ],
-                    view: new ol.View({
-                        center: ol.proj.fromLonLat([-0.650940, 39.499590]),
-                        zoom: 9
-                    })
-                });
-            </script>
-        </div>
-    </div>
-
-</section>
-<section class="screenshots-intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
+                    });
+                    var pois = new OpenLayers.Layer.Text( "My Points",
+                            { location:"./textfile.txt",
+                                projection: map.displayProjection
+                            });
+                    map.addLayer(pois);
+                </script>
 
             </div>
+
+
         </div>
     </div>
-</section>
 
+</section>
 
 <section class="features-intro" id="estrategia">
     <div class="container-fluid">
@@ -141,8 +142,7 @@
                     <ul class="slides" id="featuresSlider">
                         <li>
                             <h1>Conoce la estratégia GO!</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem.</p>
+                            <p>Accede al documento base con la propuesta de Estrategia de Gobierno Abierto elaborada por la Delegació de Transparència i Govern Obert de la Diputació de València.</p>
                             <p><a href="http://go.dival.es" target="_blank" class="arrow-btn">Más información <i
                                     class="fa fa-long-arrow-right"></i></a></p>
                         </li>
@@ -157,7 +157,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-
                 <div class="col-md-4 feature-1 wp2">
                     <div class="feature-icon">
                         <i class="fa fa-tasks"></i>
