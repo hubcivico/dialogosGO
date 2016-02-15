@@ -1,9 +1,9 @@
 $(document).ready(function () {
     /***************** GMAPS ******************/
     function initialize() {
+
         var mapCanvas = document.getElementById('mapamain');
         var myLatlng = new google.maps.LatLng(39.499590, -0.650940);
-        var myLatlng2 = new google.maps.LatLng(38.978698, 1.40);
         var mapOptions = {
             center: myLatlng,
             zoom: 8,
@@ -14,43 +14,63 @@ $(document).ready(function () {
         var infowindow = new google.maps.InfoWindow();
 
 
-        /***marker1***/
         /*
-         var marker = new google.maps.Marker({
-         map: map,
-         position: myLatlng
-         });
+        var csvData = $.ajax({
+            type: "GET",
+            url: "http://cors.io/?u=https://docs.google.com/spreadsheets/d/1GiHUiTeJ3L1BDNNKOfJMExnPLOn470gl-8eXvZrtohM/pub?gid=1493741743&single=true&output=csv",
+            crossDomain:true,
+            dataType: "csv",
+            success: function (result) {
+                console.log("HOLA");
+                alert(result);
+                alert("done!"+ csvData.getAllResponseHeaders())
+            },
+        });
+        */
 
-         var marker2 = new google.maps.Marker({
-         map: map,
-         position:myLatlng2
-         });
+        $.get('https://crossorigin.me/https://docs.google.com/spreadsheets/d/1GiHUiTeJ3L1BDNNKOfJMExnPLOn470gl-8eXvZrtohM/pub?gid=1493741743&single=true&output=csv', function(data) {
+            processData(data);
+        });
 
-         marker.setMap(map);
-         marker2.setMap(map);
+        function processData(allText) {
+            var allTextLines = allText.split(/\r\n|\n/);
+            var headers = allTextLines[0].split(',');
+            var lines = [];
 
-         google.maps.event.addListener(marker, 'click', function() {
-         infowindow.setContent(
-         '<div>' +
-         '<strong> Paseo en bici por la costa </strong><br>' +
-         'Hora: 18:30 <br>' +
-         '<a href="evento.html" class="button">Más Información</a>'+
-         '</div>'
-         );
-         infowindow.open(map, this);
-         });
+            for (var i=1; i<allTextLines.length; i++) {
+                var data = allTextLines[i].split(',');
+                console.log("DATARAW "+data );
+                var org = data[1];
+                var fecha = data[2];
+                var loc = data[3];
+                var lat = data[4].replace(/,/g, '.');
+                var lon = data[5].replace(/,/g, '.');
+                var val = data[6];
+                //var txt = data[7];
+                var latlong = new google.maps.LatLng(lat, lon);
+                console.log("LATLONG:"+latlong);
+                console.log("LAT: "+lat);
+                console.log("LON: "+lon);
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: latlong
+                });
+                marker.setMap(map);
 
-         google.maps.event.addListener(marker2, 'click', function() {
-         infowindow.setContent(
-         '<div>' +
-         '<strong> Conoce el bosque mediterráneo </strong><br>' +
-         'Hora: 15:30 <br>' +
-         '<a href="evento2.html" class="button">Más Información</a>'+
-         '</div>'
-         );
-         infowindow.open(map, this);
-         });
-         */
+                google.maps.event.addListener(marker, 'click', function() {
+                    infowindow.setContent(
+                        '<div>' +
+                        '<strong> Organizador: </strong>'+org+'<br>' +
+                        '<strong>Fecha: </strong>'+fecha+'<br>' +
+                        '<strong>Ubicación: </strong>'+loc+'<br>' +
+                        '<strong>Valoración: </strong>'+val+'<br>' +
+                        '</div>'
+                    );
+                    infowindow.open(map, this);
+                });
+
+            }
+        }
 
 
     }
