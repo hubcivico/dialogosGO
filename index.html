@@ -1,130 +1,149 @@
 <!DOCTYPE html>
 <!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
 <!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<html class="no-js lt-ie9 lt-ie8">
+<![endif]-->
 <!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
+<html class="no-js lt-ie9">
+<![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
-<html lang="en" class="no-js">
+<html class="no-js">
+<!--<![endif]-->
+
+
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
     <title>Diálogos GO!</title>
-    <meta name="description" content="Diálogos para el Gobierno Abierto"/>
-    <meta name="keywords" content="gobierno, abierto, open"/>
-    <meta name="author" content="Hub Cívico"/>
-    <!-- Bootstrap -->
-    <script src="js/modernizr.custom.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/jquery.fancybox.css" rel="stylesheet">
-    <link href="css/flickity.css" rel="stylesheet">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+    <meta content="Diálogos para el Gobierno Abierto" name="description">
+    <meta content="gobierno, abierto, open" name="keywords">
+    <meta content="Hub Cívico" name="author">
+    <script src="js/modernizr.custom.js">
+    </script>
+    <link href="css/min/bootstrap.min.css" rel="stylesheet">
+    <link href="css/min/jquery.fancybox.min.css" rel="stylesheet">
+    <link href="css/min/flickity.min.css" rel="stylesheet">
+    <link href="css/min/animate.min.css" rel="stylesheet">
+    <link href=
+                  "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+          rel="stylesheet">
+    <link href="css/min/nunito.min.css" rel='stylesheet' type='text/css'>
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/queries.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://openlayers.org/en/v3.13.1/css/ol.css" type="text/css">
-    <!-- Facebook and Twitter integration -->
-    <meta property="og:title" content=""/>
-    <meta property="og:image" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:site_name" content=""/>
-    <meta property="og:description" content=""/>
-    <meta name="twitter:title" content=""/>
-    <meta name="twitter:image" content=""/>
-    <meta name="twitter:url" content=""/>
-    <meta name="twitter:card" content=""/>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <meta content="Diálogos GO!" property="og:title">
+    <meta content="http://dialogosgo.es/content/logo.png" property="og:image">
+    <meta content="http://dialogosgo.es/" property="og:url">
+    <meta content="Diálogos GO!" property="og:site_name">
+    <meta content="Organiza un diálogo para el Gobierno Abierto" property=
+            "og:description">
+    <meta content="Diálogos GO" name="twitter:title">
+    <meta content="http://dialogosgo.es/content/logo.png" name="twitter:image">
+    <meta content="" name="twitter:url">
+    <meta content="" name="twitter:card">
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-
-
+    <script src="js/min/html5shiv.js"></script>
+    <script src="js/min/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
-<!-- open/close -->
-<header>
 
+<body>
+<header>
     <section class="hero">
-        <div class="texture-overlay"></div>
+        <div class="texture-overlay">
+        </div>
+
+
         <div class="container">
             <div class="row nav-wrapper">
                 <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-                    <a href="#"><img src="img/" alt="LOGO"></a>
+                    <a href="#"><img alt="LOGO" src="img/"></a>
                 </div>
+
+
                 <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
-                    <p>MENÚ</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
+                    <p>MENÚ</p>
+                    <a class="nav_slide_button nav-toggle" href="#" id="trigger-overlay"><span></span></a>
                 </div>
             </div>
+
+
             <div class="row hero-content">
                 <div class="col-md-12">
                     <h1 class="animated fadeInDown" id="introMsg">Organiza un diálogo para el Gobierno Abierto</h1>
-                    <a href="#estrategia" class="use-btn animated fadeInUp">Conoce la estratégia GO!</a>
-                    <a href="#recursos" class="learn-btn animated fadeInUp">Organiza el diálogo<i
-                            class="fa fa-arrow-down"></i></a>
-                    <a href="#my_typeform" class="learn-btn animated fadeInUp">Registra el resultado<i
-                            class="fa fa-arrow-down"></i></a>
+                    <a class="use-btn animated fadeInUp" href="#estrategia">Conoce la estratégia GO!</a>
+                    <a class="learn-btn animated fadeInUp" href="#recursos">Organiza el diálogo<i class="fa fa-arrow-down"></i></a>
+                    <a class="learn-btn animated fadeInUp" href="#my_typeform">Registra el resultado<i class="fa fa-arrow-down"></i></a>
                 </div>
             </div>
         </div>
     </section>
-
 </header>
+
 
 <section class="features-intro" id="mapa">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 nopadding">
                 <div class="features-slider">
-                    <ul class="slides" id="featuresSlider">
+                    <ul class="slides">
                         <li>
                             <h1>Diálogos celebrados</h1>
-                            <p>Estos han sido todos los diálogos celebrados. Haz click sobre alguno de ellos en el mapa
-                                para conocer todos los detalles así como obtener toda la información de sus
-                                resultados.</p>
 
+
+                            <p>Estos han sido todos los diálogos
+                                celebrados. Haz click sobre alguno de ellos en
+                                el mapa para conocer todos los detalles así
+                                como obtener toda la información de sus
+                                resultados.</p>
                         </li>
                     </ul>
                 </div>
             </div>
+
+
             <div class="col-md-6 nopadding">
-                <div id="mapamain" class="mapamain"></div>
+                <div class="mapamain" id="mapamain">
+                </div>
             </div>
-
-
         </div>
     </div>
-
 </section>
+
 
 <section class="features-intro" id="estrategia">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 nopadding features-intro-img">
                 <div class="features-bg">
-                    <div class="texture-overlay"></div>
+                    <div class="texture-overlay">
+                    </div>
+
+
                     <div class="features-img wp1">
                     </div>
                 </div>
             </div>
+
+
             <div class="col-md-6 nopadding">
                 <div class="features-slider">
-                    <ul class="slides" id="featuresSlider">
+                    <ul class="slides">
                         <li>
                             <h1>Conoce la estratégia GO!</h1>
-                            <p>Accede al documento base con la propuesta de Estrategia de Gobierno Abierto elaborada por
-                                la Delegació de Transparència i Govern Obert de la Diputació de València.</p>
-                            <p><a href="http://go.dival.es" target="_blank" class="arrow-btn">Más información <i
-                                    class="fa fa-long-arrow-right"></i></a></p>
+
+
+                            <p>Accede al documento base con la propuesta de
+                                Estrategia de Gobierno Abierto elaborada por la
+                                Delegació de Transparència i Govern Obert de la
+                                Diputació de València.</p>
+
+
+                            <p><a class="arrow-btn" href="http://go.dival.es" target="_blank">Más información <i class="fa fa-long-arrow-right"></i></a>
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -133,132 +152,193 @@
     </div>
 </section>
 
-<section class="features-list" id="recursos">
 
+<section class="features-list" id="recursos">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <h1 id="titorganiza">Organiza el diálogo</h1>
             </div>
         </div>
+
+
         <div class="row">
-
             <div class="col-md-12">
-
                 <div class="col-md-4 feature-1 wp2">
                     <div class="feature-icon">
                         <i class="fa fa-users"></i>
                     </div>
+
+
                     <div class="feature-content">
                         <h1>Convoca</h1>
-                        <p>Hemos preparado un cartel personalizable para que puedas realizar facilmente la convocatoria
-                            del tu diálogo GO!.</p>
-                        <a href="#download" class="read-more-btn">Descargar<i
-                                class="fa fa-chevron-circle-right"></i></a>
+
+
+                        <p>Hemos preparado un cartel personalizable para
+                            que puedas realizar facilmente la convocatoria del
+                            tu diálogo GO!.</p>
+                        <a class="read-more-btn" href="http://">Descargar<i class="fa fa-chevron-circle-right"></i></a>
                     </div>
                 </div>
+
+
                 <div class="col-md-4 feature-2 wp2 delay-05s">
                     <div class="feature-icon">
                         <i class="fa fa-comments"></i>
                     </div>
+
+
                     <div class="feature-content">
                         <h1>Conversa</h1>
-                        <p>Aquí tienes unos cuantos consejos que pueden resultarte útiles para la organización y
-                            desarrollo del diálogo.</p>
-                        <a href="http://hubcivico.org" class="read-more-btn">Descargar<i
-                                class="fa fa-chevron-circle-right"></i></a>
+
+
+                        <p>Aquí tienes unos cuantos consejos que pueden
+                            resultarte útiles para la organización y desarrollo
+                            del diálogo.</p>
+                        <a class="read-more-btn" href="http://">Descargar<i class="fa fa-chevron-circle-right"></i></a>
                     </div>
                 </div>
+
+
                 <div class="col-md-4 feature-3 wp2 delay-1s">
                     <div class="feature-icon">
                         <i class="fa fa-paperclip"></i>
                     </div>
+
+
                     <div class="feature-content">
                         <h1>Recopila</h1>
-                        <p>Seguro que durante el diálogo surgen muchas ideas interesantes. Con esta plantilla te
-                            resultará más fácil recogerlas.</p>
-                        <a href="http://hubcivico.org" class="read-more-btn">Descargar<i
-                                class="fa fa-chevron-circle-right"></i></a>
+
+
+                        <p>Seguro que durante el diálogo surgen muchas
+                            ideas interesantes. Con esta plantilla te resultará
+                            más fácil recogerlas.</p>
+                        <a class="read-more-btn" href="href=&quot;http://&quot;">Descargar<i class="fa fa-chevron-circle-right"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 </section>
 
+
 <section class="features-intro" id="registrar">
-    <iframe id="my_typeform" src="https://algope.typeform.com/to/eikWgg"></iframe>
+    <iframe id="my_typeform" name="my_typeform" src="https://algope.typeform.com/to/eikWgg"></iframe>
 </section>
 
 
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-md-5">
-                <h1 class="footer-logo">
-                    <img id="footer-logo" src="img/grupcalam.svg" alt="Footer Logo Gray">
-                </h1>
+            <div class="col-md-4">
+                <h1 class="h1footer">DiálogosGO!</h1>
+
+
+                <p id="pfooter">Diálogos Go! surge como un proyecto de
+                    innovación democrática para que la ciudadanía influya,
+                    desde sus propios espacios, en la elaboración de políticas
+                    públicas. A través de esta iniciativa cualquier ciudadano/a
+                    o asociación puede convocar a personas de su entorno para
+                    conversar sobre la Estrategia de Gobierno Abierto que
+                    actualmente está definiendo la Delegació de Transparència i
+                    Govern Obert de la Diputación de Valencia. Las ideas
+                    recogidas supondrán un aporte ncesario y significativo a la
+                    definición de esta política.</p>
             </div>
-            <div class="col-md-7">
 
-                <h1 id="h1footer">Sobre diálogosGO!</h1>
-                <p id="pfooter">Accede al documento base con la propuesta de Estrategia de Gobierno Abierto elaborada por la
-                    Delegació de Transparència i Govern Obert de la Diputació de València.Accede al documento base con
-                    la propuesta de Estrategia de Gobierno Abierto elaborada por la Delegació de Transparència i Govern
-                    Obert de la Diputació de València.Accede al documento base con la propuesta de Estrategia de
-                    Gobierno Abierto elaborada por la Delegació de Transparència i Govern Obert de la Diputació de
-                    València.</p>
-                <h1 class="footer-logo">
-                    <img id="footer-logo" src="img/hubcivico.svg" alt="Footer Logo Gray">
-                </h1>
 
+            <div class="col-md-4">
+                <h1 class="h1footer">Organizan</h1>
+                <img alt="Footer Logo Gray" id="grupcalam-logo" src="img/grupcalam.svg">
+                <img alt="Footer Logo Gray" id="fentciutat-logo" src="img/fentciutat.png"></div>
+
+
+            <div class="col-md-4">
+                <h1 class="h1footer">Contacto</h1>
+
+
+                <h3>Email: <a href="mailto:info@hubcivico.org?Subject=Hola!" target="_top">info@hubcivico.org</a></h3>
+
+
+                <h3>Twitter: <a href="http://twitter.com" target="_top">@HubCívico</a></h3>
+
+
+                <h3>Facebook: <a href="http://facebook.com" target="_top">Grup Càlam</a></h3>
+            </div>
+        </div>
+
+        <hr>
+
+
+        <div class="row">
+            <div class="col-md-12" id="devby">
+                <h2>Desarrollado por <img alt="Footer Logo Gray" id="hubcivico-logo" src="img/hubcivico.png"></h2>
             </div>
         </div>
     </div>
 </footer>
-<div class="overlay overlay-dialegs">
 
+
+<div class="overlay overlay-dialegs">
     <nav>
         <ul>
-            <li><a href="#estrategia"><i class="fa fa-heart"></i>Conoce</a></li>
-            <li><a href="#recursos"><i class="fa fa-flash"></i>Organiza</a></li>
+            <li>
+                <a href="#estrategia"><i class="fa fa-heart"></i>Conoce</a>
+            </li>
+
+
+            <li>
+                <a href="#recursos"><i class="fa fa-flash"></i>Organiza</a>
+            </li>
         </ul>
+
+
         <ul>
-            <li><a href="#my_typeform"><i class="fa fa-desktop"></i>Registra</a></li>
-            <li><a href="http://dialegsgo.es"><i class="fa fa-globe"></i>Valencià</a></li>
+            <li>
+                <a href="#my_typeform"><i class="fa fa-desktop"></i>Registra</a>
+            </li>
+
+
+            <li>
+                <a href="http://dialegsgo.es"><i class="fa fa-globe"></i>Valencià</a>
+            </li>
         </ul>
     </nav>
 </div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/min/toucheffects-min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="js/flickity.pkgd.min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/retina.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/min/scripts-min.js"></script>
-<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-<script>
-    (function (b, o, i, l, e, r) {
-        b.GoogleAnalyticsObject = l;
-        b[l] || (b[l] =
-                function () {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
-        b[l].l = +new Date;
-        e = o.createElement(i);
-        r = o.getElementsByTagName(i)[0];
-        e.src = '//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e, r)
-    }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
+<script src="js/min/toucheffects-min.js">
 </script>
+<script src="js/min/jquery.min.js">
+</script>
+<script src="js/min/gmaps.js">
+</script>
+<script src="js/flickity.pkgd.min.js">
+</script>
+<script src="js/jquery.fancybox.pack.js">
+</script>
+<script src="js/retina.js">
+</script>
+<script src="js/waypoints.min.js">
+</script>
+<script src="js/bootstrap.min.js">
+</script>
+<script src="js/min/scripts-min.js">
+</script> <!-- Google Analytics. -->
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
+    ga('create', 'UA-73335269-2', 'auto');
+    ga('send', 'pageview');
 
+</script>
 </body>
 </html>

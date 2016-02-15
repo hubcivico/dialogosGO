@@ -1,4 +1,3 @@
-/* ! normalize.css v1.0.0 | MIT License | git.io/normalize */
 
 /* ==========================================================================
 HTML5 display definitions
@@ -12,31 +11,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     display: block
 }
 
-/*
-* Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
-*/
-audio, canvas, video {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
-}
-
-/*
-* Prevents modern browsers from displaying `audio` without controls.
-* Remove excess height in iOS 5 devices.
-*/
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
-
-/*
-* Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3, * and Safari 4.
-* Known issue:no IE 6 support.
-*/
-[hidden] {
-    display: none
-}
 
 /* ==========================================================================
 Base
@@ -648,41 +622,6 @@ header i {
 }
 
 /* ==========================================================================
-Video
-========================================================================== */
-section.video i {
-    margin-right: 10px;
-    color: #323a45;
-    vertical-align: middle;
-    font-size: 50px;
-    -webkit-transition: color 300ms ease-in-out;
-    transition: color 300ms ease-in-out;
-}
-
-section.video h1 {
-    font-weight: 400;
-    font-size: 20px;
-}
-
-section.video {
-    padding: 60px 0;
-    background-color: #f6f7f9;
-}
-
-section.video a {
-    color: #323a45
-}
-
-section.video a:hover, section.video a:focus {
-    color: #73d0da;
-    text-decoration: none;
-}
-
-section.video a:hover i, section.video a:focus i {
-    color: #73d0da
-}
-
-/* ==========================================================================
 Custom Slider Controls (Flickity)
 ========================================================================== */
 .flickity-page-dots .dot {
@@ -897,127 +836,6 @@ Showcase
 }
 
 /* ==========================================================================
-Screenshots Intro
-========================================================================== */
-.screenshots-intro {
-    padding: 20px 0 30px 0;
-    background-color: #f6f7f9;
-}
-
-.screenshots-intro h1 {
-    margin-bottom: 20px;
-    color: #24374b;
-    font-weight: 400;
-    font-size: 40px;
-}
-
-.screenshots-intro p {
-    margin-bottom: 25px;
-    color: #778899;
-    font-size: 19px;
-}
-
-/* ==========================================================================
-Screenshots
-========================================================================== */
-.screenshots ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-.screenshots ul li {
-    float: left;
-    min-height: 100%;
-    width: 25%;
-    background-color: #000;
-    list-style: none;
-}
-
-.screenshots figure {
-    position: relative;
-    overflow: hidden;
-}
-
-.screenshots figure img {
-    width: 100%;
-    height: 100%;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-
-.screenshots figure:hover img, .screenshots figure:focus img {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
-.screenshots figcaption {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 25% 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(63, 97, 132, 0.85);
-    text-align: center;
-    font-size: 15px;
-    opacity: 0;
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-
-.screenshots figcaption a {
-    color: #fff
-}
-
-.screenshots figcaption a:hover, .screenshots figcaption a:focus {
-    color: #000000
-}
-
-.screenshots figure:hover figcaption, .screenshots figure:focus figcaption {
-    opacity: 1
-}
-
-.visible {
-    opacity: 1
-}
-
-.screenshots figure.cs-hover figcaption {
-    opacity: 1
-}
-
-.screenshots figcaption i {
-    font-size: 35px
-}
-
-.screenshots figcaption p {
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.screenshots figcaption .caption-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -40px;
-    margin-left: -100px;
-    width: 200px;
-    -webkit-transform: translate(0px, 15px);
-    -ms-transform: translate(0px, 15px);
-    transform: translate(0px, 15px);
-    -webkit-transition: all 300ms ease-in-out;
-    transition: all 300ms ease-in-out;
-}
-
-.screenshots figure:hover figcaption .caption-content, .screenshots figure:focus figcaption .caption-content {
-    -webkit-transform: translate(0px, 0px);
-    -ms-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
-}
-
-/* ==========================================================================
 Download Now
 ========================================================================== */
 .download {
@@ -1222,9 +1040,18 @@ DIALOGOS GO!
     height: 500px;
 }
 
-#footer-logo {
-    width: 300px;
+#grupcalam-logo {
+    width: 331px;
     height: 70px;
+}
+#fentciutat-logo {
+    width: 300px;
+    height: 78px;
+}
+#hubcivico-logo {
+    width: 300px;
+    height: 94px;
+    margin-bottom: 8px;
 }
 
 .dot {
@@ -1246,11 +1073,22 @@ DIALOGOS GO!
     margin-bottom: 80px;
 }
 
-#h1footer {
+.h1footer {
     color: #95989a;
 }
 
 #pfooter{
     text-align: justify;
 }
-
+ #devby{
+     text-align: center;
+ }
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
