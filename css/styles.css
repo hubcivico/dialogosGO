@@ -597,7 +597,7 @@ Hero
 }
 
 .hero h1 {
-    margin: 170px 0 45px 0;
+    margin: 110px 0 45px 0;
     font-weight: 300;
     font-size: 45px;
 }
@@ -1091,4 +1091,8 @@ hr {
     margin-right: auto;
     border-style: inset;
     border-width: 1px;
+}
+
+#logo-main{
+    height: 152px;
 }
