@@ -59,7 +59,7 @@
         <div class="container">
             <div class="row nav-wrapper">
                 <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-                    <p id="logotext">Diálogos GO!</p>
+                    <a href="#"><img src="img/" alt="LOGO"></a>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
                     <p>MENÚ</p><a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
@@ -80,50 +80,31 @@
 
 </header>
 
-<section class="screenshots-intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1>Diálogos celebrados</h1>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="features-intro" id="mapa">
     <div class="container-fluid">
         <div class="row">
-            <script src="js/ol.js" type="text/javascript"></script>
-            <div id="mapamain" class="mapamain"></div>
-            <script type="text/javascript">
-                var map = new ol.Map({
-                    target: 'mapamain',
-                    interactions: ol.interaction.defaults({mouseWheelZoom:false}),
-                    layers: [
-                        new ol.layer.Tile({
-                            source: new ol.source.MapQuest({layer: 'osm'})
-                        })
-                    ],
-                    view: new ol.View({
-                        center: ol.proj.fromLonLat([-0.650940, 39.499590]),
-                        zoom: 9
-                    })
-                });
-            </script>
-        </div>
-    </div>
+            <div class="col-md-6 nopadding">
+                <div class="features-slider">
+                    <ul class="slides" id="featuresSlider">
+                        <li>
+                            <h1>Diálogos celebrados</h1>
+                            <p>Estos han sido todos los diálogos celebrados. Haz click sobre alguno de ellos en el mapa
+                                para conocer todos los detalles así como obtener toda la información de sus
+                                resultados.</p>
 
-</section>
-<section class="screenshots-intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-
+                        </li>
+                    </ul>
+                </div>
             </div>
+            <div class="col-md-6 nopadding">
+                <div id="mapamain" class="mapamain"></div>
+            </div>
+
+
         </div>
     </div>
-</section>
 
+</section>
 
 <section class="features-intro" id="estrategia">
     <div class="container-fluid">
@@ -132,7 +113,6 @@
                 <div class="features-bg">
                     <div class="texture-overlay"></div>
                     <div class="features-img wp1">
-                        <img src="img/html5-logo.png" alt="HTML5 Logo">
                     </div>
                 </div>
             </div>
@@ -141,8 +121,8 @@
                     <ul class="slides" id="featuresSlider">
                         <li>
                             <h1>Conoce la estratégia GO!</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                                consequat ut sed sem.</p>
+                            <p>Accede al documento base con la propuesta de Estrategia de Gobierno Abierto elaborada por
+                                la Delegació de Transparència i Govern Obert de la Diputació de València.</p>
                             <p><a href="http://go.dival.es" target="_blank" class="arrow-btn">Más información <i
                                     class="fa fa-long-arrow-right"></i></a></p>
                         </li>
@@ -154,31 +134,38 @@
 </section>
 
 <section class="features-list" id="recursos">
+
     <div class="container">
         <div class="row">
+            <div class="col-md-12">
+                <h1 id="titorganiza">Organiza el diálogo</h1>
+            </div>
+        </div>
+        <div class="row">
+
             <div class="col-md-12">
 
                 <div class="col-md-4 feature-1 wp2">
                     <div class="feature-icon">
-                        <i class="fa fa-tasks"></i>
+                        <i class="fa fa-users"></i>
                     </div>
                     <div class="feature-content">
-                        <h1>Recursos</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                            consequat ut sed sem.</p>
+                        <h1>Convoca</h1>
+                        <p>Hemos preparado un cartel personalizable para que puedas realizar facilmente la convocatoria
+                            del tu diálogo GO!.</p>
                         <a href="#download" class="read-more-btn">Descargar<i
                                 class="fa fa-chevron-circle-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 feature-2 wp2 delay-05s">
                     <div class="feature-icon">
-                        <i class="fa fa-question-circle"></i>
+                        <i class="fa fa-comments"></i>
                     </div>
                     <div class="feature-content">
-                        <h1>Ayuda</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                            consequat ut sed sem.</p>
-                        <a href="http://hubcivico.org" class="read-more-btn">Consultar <i
+                        <h1>Conversa</h1>
+                        <p>Aquí tienes unos cuantos consejos que pueden resultarte útiles para la organización y
+                            desarrollo del diálogo.</p>
+                        <a href="http://hubcivico.org" class="read-more-btn">Descargar<i
                                 class="fa fa-chevron-circle-right"></i></a>
                     </div>
                 </div>
@@ -187,10 +174,10 @@
                         <i class="fa fa-paperclip"></i>
                     </div>
                     <div class="feature-content">
-                        <h1>Documentación</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum
-                            consequat ut sed sem.</p>
-                        <a href="http://hubcivico.org" class="read-more-btn">Leer más <i
+                        <h1>Recopila</h1>
+                        <p>Seguro que durante el diálogo surgen muchas ideas interesantes. Con esta plantilla te
+                            resultará más fácil recogerlas.</p>
+                        <a href="http://hubcivico.org" class="read-more-btn">Descargar<i
                                 class="fa fa-chevron-circle-right"></i></a>
                     </div>
                 </div>
@@ -210,36 +197,43 @@
         <div class="row">
             <div class="col-md-5">
                 <h1 class="footer-logo">
-                    <img id="footer-logo" src="img/logo-blue.png" alt="Footer Logo Gray">
+                    <img id="footer-logo" src="img/grupcalam.svg" alt="Footer Logo Gray">
                 </h1>
-                <p>© HubCívico 2016 - <a href="http://hubcivico.org"></a></p>
             </div>
             <div class="col-md-7">
-                <ul class="footer-nav">
-                    <li><a href="#about">Uno</a></li>
-                    <li><a href="#features">Dos</a></li>
-                    <li><a href="#">Tres</a></li>
-                    <li><a href="#download">Cuatro</a></li>
-                </ul>
+
+                <h1 id="h1footer">Sobre diálogosGO!</h1>
+                <p id="pfooter">Accede al documento base con la propuesta de Estrategia de Gobierno Abierto elaborada por la
+                    Delegació de Transparència i Govern Obert de la Diputació de València.Accede al documento base con
+                    la propuesta de Estrategia de Gobierno Abierto elaborada por la Delegació de Transparència i Govern
+                    Obert de la Diputació de València.Accede al documento base con la propuesta de Estrategia de
+                    Gobierno Abierto elaborada por la Delegació de Transparència i Govern Obert de la Diputació de
+                    València.</p>
+                <h1 class="footer-logo">
+                    <img id="footer-logo" src="img/hubcivico.svg" alt="Footer Logo Gray">
+                </h1>
+
             </div>
         </div>
     </div>
 </footer>
-<div class="overlay overlay-boxify">
+<div class="overlay overlay-dialegs">
+
     <nav>
         <ul>
-            <li><a href="#about"><i class="fa fa-heart"></i>Uno</a></li>
-            <li><a href="#features"><i class="fa fa-flash"></i>Dos</a></li>
+            <li><a href="#estrategia"><i class="fa fa-heart"></i>Conoce</a></li>
+            <li><a href="#recursos"><i class="fa fa-flash"></i>Organiza</a></li>
         </ul>
         <ul>
-            <li><a href="#"><i class="fa fa-desktop"></i>Tres</a></li>
-            <li><a href="#download"><i class="fa fa-download"></i>Cuatro</a></li>
+            <li><a href="#my_typeform"><i class="fa fa-desktop"></i>Registra</a></li>
+            <li><a href="http://dialegsgo.es"><i class="fa fa-globe"></i>Valencià</a></li>
         </ul>
     </nav>
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/min/toucheffects-min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="js/flickity.pkgd.min.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -264,6 +258,7 @@
     ga('create', 'UA-XXXXX-X');
     ga('send', 'pageview');
 </script>
+
 
 </body>
 </html>
