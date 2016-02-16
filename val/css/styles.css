@@ -474,6 +474,8 @@ Buttons
     text-decoration: none;
 }
 
+
+
 .learn-btn, .download-btn {
     display: inline-block;
     padding: 18px 46px;
@@ -1080,9 +1082,9 @@ DIALOGOS GO!
 #pfooter{
     text-align: justify;
 }
- #devby{
-     text-align: center;
- }
+#devby{
+    text-align: center;
+}
 hr {
     display: block;
     margin-top: 0.5em;
@@ -1095,4 +1097,25 @@ hr {
 
 #logo-main{
     height: 152px;
+}
+
+.use-btn.maping {
+    margin-top:15px;
+    display: inline-block;
+    padding: 10px 60px;
+    border-radius: 3px;
+    background-color: #ff3b41;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.use-btn.maping:hover, .use-btn.maping:focus {
+    background-color: #CC2F37;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+.map-window{
+
 }
