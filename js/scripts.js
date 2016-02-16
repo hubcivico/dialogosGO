@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    /***************** Waypoints ******************/
+    /********************************** Waypoints ***********************************/
 
     $('.wp1').waypoint(function () {
         $('.wp1').addClass('animated fadeInLeft');
@@ -23,7 +23,7 @@ $(document).ready(function () {
         offset: '75%'
     });
 
-    /***************** Flickity ******************/
+    /********************************** Flickity ***********************************/
 
     $('#featuresSlider').flickity({
         cellAlign: 'left',
@@ -38,7 +38,7 @@ $(document).ready(function () {
         imagesLoaded: true
     });
 
-    /***************** Fancybox ******************/
+    /********************************** Fancybox ***********************************/
 
     $(".youtube-media").on("click", function (e) {
         var jWindow = $(window).width();
@@ -63,7 +63,7 @@ $(document).ready(function () {
     });
 });
 
-/***************** Nav Transformicon ******************/
+/********************************** Nav Transformicon ***********************************/
 
 /* When user clicks the Icon */
 $(".nav-toggle").click(function () {
@@ -83,7 +83,7 @@ $(".overlay").click(function () {
     $(".overlay-dialegs").toggleClass("open");
 });
 
-/***************** Smooth Scrolling ******************/
+/********************************** Smooth Scrolling ***********************************/
 
 $('a[href*=#]:not([href=#])').click(function () {
     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
@@ -100,7 +100,7 @@ $('a[href*=#]:not([href=#])').click(function () {
 });
 
 
-/***************** GMAPS ******************/
+/********************************** GMAPS **********************************/
 
 $(document).ready(function () {
 
