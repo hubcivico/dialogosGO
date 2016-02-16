@@ -159,10 +159,10 @@ $(document).ready(function () {
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.setContent(
                     '<div class="map-window">' +
-                    '<strong> Organizador: </strong>'+org+'<br>' +
-                    '<strong>Fecha: </strong>'+fecha+'<br>' +
-                    '<strong>Ubicación: </strong>'+loc+'<br>' +
-                    '<strong>Valoración: </strong>'+stars+'<br>' +
+                    '<strong> Organitzador: </strong>'+org+'<br>' +
+                    '<strong>Data: </strong>'+fecha+'<br>' +
+                    '<strong>Ubicació: </strong>'+loc+'<br>' +
+                    '<strong>Valoració: </strong>'+stars+'<br>' +
                     '<a href="'+url+'" target="_blank" class="use-btn maping">Informe</a>'+
                     '</div>'
                 );
