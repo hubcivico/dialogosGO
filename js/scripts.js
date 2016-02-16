@@ -136,7 +136,6 @@ $(document).ready(function () {
                         var lon = row.LON;
                         var val = row.VALORACION;
                         var url = row.URLPDF;
-                        console.log(org);
                         var latlong = new google.maps.LatLng(lat, lon);
                         var marker = new google.maps.Marker({
                             map: map,
@@ -163,7 +162,7 @@ $(document).ready(function () {
                     '<strong>Fecha: </strong>'+fecha+'<br>' +
                     '<strong>Ubicación: </strong>'+loc+'<br>' +
                     '<strong>Valoración: </strong>'+stars+'<br>' +
-                    '<a href="'+url+'" target="_blank" class="use-btn maping">Informe</a>'+
+                    '<a href="http://'+url+'" target="_blank" class="use-btn maping">Informe</a>'+
                     '</div>'
                 );
                 infowindow.open(map, this);
