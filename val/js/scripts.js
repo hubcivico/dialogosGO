@@ -1,81 +1,4 @@
 $(document).ready(function () {
-    /***************** GMAPS ******************/
-    function initialize() {
-
-        var mapCanvas = document.getElementById('mapamain');
-        var myLatlng = new google.maps.LatLng(39.499590, -0.650940);
-        var mapOptions = {
-            center: myLatlng,
-            zoom: 8,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-            scrollwheel: false
-        };
-        var map = new google.maps.Map(mapCanvas, mapOptions);
-        var infowindow = new google.maps.InfoWindow();
-
-
-        /*
-        var csvData = $.ajax({
-            type: "GET",
-            url: "http://cors.io/?u=https://docs.google.com/spreadsheets/d/1GiHUiTeJ3L1BDNNKOfJMExnPLOn470gl-8eXvZrtohM/pub?gid=1493741743&single=true&output=csv",
-            crossDomain:true,
-            dataType: "csv",
-            success: function (result) {
-                console.log("HOLA");
-                alert(result);
-                alert("done!"+ csvData.getAllResponseHeaders())
-            },
-        });
-        */
-
-        $.get('https://crossorigin.me/https://docs.google.com/spreadsheets/d/1GiHUiTeJ3L1BDNNKOfJMExnPLOn470gl-8eXvZrtohM/pub?gid=1493741743&single=true&output=csv', function(data) {
-            processData(data);
-        });
-
-        function processData(allText) {
-            var allTextLines = allText.split(/\r\n|\n/);
-            var headers = allTextLines[0].split(',');
-            var lines = [];
-
-            for (var i=1; i<allTextLines.length; i++) {
-                var data = allTextLines[i].split(',');
-                console.log("DATARAW "+data );
-                var org = data[1];
-                var fecha = data[2];
-                var loc = data[3];
-                var lat = data[4].replace(/,/g, '.');
-                var lon = data[5].replace(/,/g, '.');
-                var val = data[6];
-                //var txt = data[7];
-                var latlong = new google.maps.LatLng(lat, lon);
-                console.log("LATLONG:"+latlong);
-                console.log("LAT: "+lat);
-                console.log("LON: "+lon);
-                var marker = new google.maps.Marker({
-                    map: map,
-                    position: latlong
-                });
-                marker.setMap(map);
-
-                google.maps.event.addListener(marker, 'click', function() {
-                    infowindow.setContent(
-                        '<div>' +
-                        '<strong> Organizador: </strong>'+org+'<br>' +
-                        '<strong>Fecha: </strong>'+fecha+'<br>' +
-                        '<strong>Ubicación: </strong>'+loc+'<br>' +
-                        '<strong>Valoración: </strong>'+val+'<br>' +
-                        '</div>'
-                    );
-                    infowindow.open(map, this);
-                });
-
-            }
-        }
-
-
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);
 
     /***************** Waypoints ******************/
 
@@ -131,6 +54,7 @@ $(document).ready(function () {
         return false;
     });
 
+
 });
 
 $(document).ready(function () {
@@ -174,3 +98,86 @@ $('a[href*=#]:not([href=#])').click(function () {
         }
     }
 });
+
+
+/***************** GMAPS ******************/
+
+$(document).ready(function () {
+
+
+    function initialize() {
+
+        var mapCanvas = document.getElementById('mapamain');
+        var myLatlng = new google.maps.LatLng(39.499590, -0.650940);
+        var mapOptions = {
+            center: myLatlng,
+            zoom: 8,
+            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            scrollwheel: false
+        };
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+        //TESTING var rscUrl = 'https://crossorigin.me/https://docs.google.com/spreadsheets/d/1l80cVW6pSJ6Y36VbS5p6f2c6GXcditBOfaiXABnF8sc/pub?gid=1493741743&single=true&output=csv';
+        var rscUrl = 'https://crossorigin.me/https://docs.google.com/spreadsheets/d/1GiHUiTeJ3L1BDNNKOfJMExnPLOn470gl-8eXvZrtohM/pub?gid=1493741743&single=true&output=csv';
+
+        Papa.parse(rscUrl, {
+            download: true,
+            header: true,
+            dynamicTyping: true,
+            encoding: 'utf8',
+            skipEmptyLines: true,
+            complete: function processRow(results){
+                for(var i=0; i<results.data.length; i++){
+                    var row = results.data[i];
+                    if(row.ID){
+                        var org = row.ORGANIZA;
+                        var fecha = row.FECHA;
+                        var loc = row.LUGAR;
+                        var lat = row.LAT;
+                        var lon = row.LON;
+                        var par = row.PARTICIPANTES;
+                        var val = row.VALORACION;
+                        var url = row.URLPDF;
+                        var latlong = new google.maps.LatLng(lat, lon);
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: latlong
+
+                        });
+                        generateWindow(marker, org, fecha, loc, par, val, url);
+
+                    }
+                }
+            }
+        });
+
+        function generateWindow(marker, org, fecha, loc, par, val, url){
+            var stars = '';
+            for(var i=0; i<val; i++){
+                stars = stars + '<i class="fa fa-star"></i>';
+            }
+            var infowindow = new google.maps.InfoWindow();
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.setContent(
+                    '<div class="map-window">' +
+                    '<strong>Organitzador: </strong>'+org+'<br>' +
+                    '<strong>Data: </strong>'+fecha+'<br>' +
+                    '<strong>Ubicació: </strong>'+loc+'<br>' +
+                    '<strong>Participants: </strong>'+par+'<br>' +
+                    '<strong>Valoració: </strong>'+stars+'<br>' +
+                    '<a href="'+url+'" target="_blank" class="use-btn maping">Informe</a>'+
+                    '</div>'
+                );
+                infowindow.open(map, this);
+            });
+            marker.setMap(map);
+        }
+
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+});
+
+
+
+
