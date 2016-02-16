@@ -134,6 +134,7 @@ $(document).ready(function () {
                         var loc = row.LUGAR;
                         var lat = row.LAT;
                         var lon = row.LON;
+                        var par = row.PARTICIPANTES;
                         var val = row.VALORACION;
                         var url = row.URLPDF;
                         var latlong = new google.maps.LatLng(lat, lon);
@@ -142,14 +143,14 @@ $(document).ready(function () {
                             position: latlong
 
                         });
-                        generateWindow(marker, org, fecha, loc, val, url);
+                        generateWindow(marker, org, fecha, loc, par, val, url);
 
                     }
                 }
             }
         });
 
-        function generateWindow(marker, org, fecha, loc, val, url){
+        function generateWindow(marker, org, fecha, loc, par, val, url){
             var stars = '';
             for(var i=0; i<val; i++){
                 stars = stars + '<i class="fa fa-star"></i>';
@@ -158,11 +159,12 @@ $(document).ready(function () {
             google.maps.event.addListener(marker, 'click', function() {
                 infowindow.setContent(
                     '<div class="map-window">' +
-                    '<strong> Organitzador: </strong>'+org+'<br>' +
+                    '<strong>Organitzador: </strong>'+org+'<br>' +
                     '<strong>Data: </strong>'+fecha+'<br>' +
                     '<strong>Ubicació: </strong>'+loc+'<br>' +
+                    '<strong>Participants: </strong>'+par+'<br>' +
                     '<strong>Valoració: </strong>'+stars+'<br>' +
-                    '<a href="http://'+url+'" target="_blank" class="use-btn maping">Informe</a>'+
+                    '<a href="'+url+'" target="_blank" class="use-btn maping">Informe</a>'+
                     '</div>'
                 );
                 infowindow.open(map, this);
