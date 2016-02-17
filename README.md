@@ -1,1 +1,2 @@
 # dialogosGO
+Diálogos GO! surge como un proyecto de innovación democrática para que la ciudadanía influya, desde sus propios espacios, en la elaboración de políticas públicas. A través de esta iniciativa cualquier ciudadano/a o asociación puede convocar a personas de su entorno para conversar sobre la Estrategia de Gobierno Abierto que actualmente está definiendo la Delegació de Transparència i Govern Obert de la Diputación de Valencia. Las ideas recogidas supondrán un aporte necesario y significativo a la definición de esta política.
