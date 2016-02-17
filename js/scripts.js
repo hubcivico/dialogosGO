@@ -113,12 +113,17 @@ $(document).ready(function () {
             center: myLatlng,
             zoom: 8,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
-            scrollwheel: false
+            scrollwheel: false,
+            zoomControl: true
+
         };
         var map = new google.maps.Map(mapCanvas, mapOptions);
+
         //TESTING var rscUrl = 'https://crossorigin.me/https://docs.google.com/spreadsheets/d/1l80cVW6pSJ6Y36VbS5p6f2c6GXcditBOfaiXABnF8sc/pub?gid=1493741743&single=true&output=csv';
         var rscUrl = 'https://crossorigin.me/https://docs.google.com/spreadsheets/d/1GiHUiTeJ3L1BDNNKOfJMExnPLOn470gl-8eXvZrtohM/pub?gid=1493741743&single=true&output=csv';
-
+        google.maps.event.addListener(map, 'idle', function(){
+            document.getElementById('mapamain').style.position = "initial";
+        });
         Papa.parse(rscUrl, {
             download: true,
             header: true,
@@ -175,6 +180,9 @@ $(document).ready(function () {
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
 
 });
 
